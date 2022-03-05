@@ -17,18 +17,24 @@
           "type": "path"
         },
         {
-          "background": "#ffff00",
-          "foreground": "#000000",
+          "type": "git",
+          "style": "powerline",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+            "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+            "{{ if gt .Behind 0 }}#B388FB{{ end }}"
+          ],
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "branch_identical_icon": true,
-            "fetch_stash_count": true,
             "fetch_status": true,
+            "fetch_stash_count": true,
             "fetch_upstream_icon": true,
-            "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} "
-          },
-          "style": "powerline",
-          "type": "git"
+            "fetch_worktree_count": true,
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}"
+          }
         },
         {
           "background": "#6CA35E",
@@ -42,29 +48,48 @@
           "type": "dotnet"
         },
         {
-          "background": "#800080",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "template": " \uf0e7 "
-          },
+          "type": "angular",
           "style": "powerline",
-          "type": "root"
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#000000",
+          "background": "#1976d2",
+          "properties": {
+            "template": " \uE753 {{ .Full }} "
+          }
         },
         {
+          "type": "battery",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "background_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "properties": {
+            "discharging_icon": "\uE231 ",
+            "charging_icon": "\uE234 ",
+            "charged_icon": "\uE22F ",
+            "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}\uF295 "
+          }
+        },
+        {
+          "type": "exit",
+          "style": "powerline",
           "background": "#2e9599",
+          "foreground": "#ffffff",
           "background_templates": [
             "{{ if gt .Code 0 }}#f1184c{{ end }}"
           ],
-          "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "always_enabled": true,
+            "always_enabled": false,
             "template": " \ue23a "
           },
-          "style": "powerline",
-          "trailing_diamond": "\ue0b4",
-          "type": "exit"
+          "leading_diamond": "",
+          "trailing_diamond": "\ue0b4"
         }
       ],
       "type": "prompt"
