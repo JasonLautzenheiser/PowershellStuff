@@ -1,3 +1,8 @@
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+}
+
 $ProfileRoot = (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $env:path += ";$ProfileRoot"
 $env:path += ";$ProfileRoot\scripts"
