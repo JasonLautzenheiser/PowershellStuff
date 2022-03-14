@@ -12,18 +12,20 @@ if (Get-Module oh-my-posh -ListAvailable) {
 
     try {
         if (Test-Path $ohMyPoshConfig) {
-            Remove-Item $ohMyPoshConfig -Force
             $bak = "$ohMyPoshConfig.bak"
             if (Test-Path $bak) {
                 Remove-Item $bak -Force
+                Copy-Item 
             }
+            Copy-Item $ohMyPoshConfigOriginal $bak -Force
+            Remove-Item $ohMyPoshConfig -Force
         }
         Copy-Item $ohMyPoshConfigOriginal $ohMyPoshConfig -Force
     }
     catch {
         Write-Warning "Unable to write oh-my-posh profile to $ohMyPoshConfig -- $($_)"
     }
-    oh-my-posh --init -shell pwsh --config $ohMyPoshConfig | Invoke-Expression
+    oh-my-posh --init --shell pwsh --config $ohMyPoshConfig | Invoke-Expression
 }
 
 if (Get-Module Terminal-Icons -ListAvailable) {

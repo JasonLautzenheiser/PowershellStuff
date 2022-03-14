@@ -7,6 +7,16 @@ I use [oh-my-posh](https://ohmyposh.dev) for my custom prompt.  Check out this g
 ## Setup
 Edit your profile script, which by using the following in your powershell terminal:
 
+First you'll need to install a few powershell modules:
+
+```console
+install-module -Name PSReadLine 
+install-module -Name oh-my-posh
+install-module -Name terminal-icons
+install-module -Name z
+```
+these 4 installs should give you everything needed
+
 ```console
 $profile
 ```

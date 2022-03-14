@@ -4,8 +4,10 @@ if ($host.Name -eq 'ConsoleHost')
 }
 
 $ProfileRoot = (Split-Path -Parent $MyInvocation.MyCommand.Path)
+$AppsRoot = "C:\apps"
 $env:path += ";$ProfileRoot"
 $env:path += ";$ProfileRoot\scripts"
+$env:path += ";$AppsRoot\powershell\scripts"
 
 Set-Location C:\projects
 
