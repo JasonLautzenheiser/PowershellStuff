@@ -15,7 +15,6 @@ if (Get-Module oh-my-posh -ListAvailable) {
             $bak = "$ohMyPoshConfig.bak"
             if (Test-Path $bak) {
                 Remove-Item $bak -Force
-                Copy-Item 
             }
             Copy-Item $ohMyPoshConfigOriginal $bak -Force
             Remove-Item $ohMyPoshConfig -Force
