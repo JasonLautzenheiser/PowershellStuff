@@ -24,7 +24,7 @@ if (Get-Module oh-my-posh -ListAvailable) {
     catch {
         Write-Warning "Unable to write oh-my-posh profile to $ohMyPoshConfig -- $($_)"
     }
-    oh-my-posh --init --shell pwsh --config $ohMyPoshConfig | Invoke-Expression
+    oh-my-posh init powershell --config $ohMyPoshConfig | Invoke-Expression
 }
 
 if (Get-Module Terminal-Icons -ListAvailable) {
