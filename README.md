@@ -42,10 +42,9 @@ Add the following line in your startup profile (changing the appropriate paths o
 If you use the integrated terminal in In Visual Studio Code you will have to update your font settings to get the glyphs to render
 - File => Preferences => Settings => 
 - search for font under text editor
-In the Editor: Font Famil setting, add your installed NF name to the front of the list and VS code will fallback to the existing ones if need be
-ex - MesloLGM Nerd Font, Consolas, 'Courier New', monospace
+In the Editor: Font Famil setting, add your installed NF name to the front of the list if you want to use the font in your editor as well or at the end of the list if you want the font and glyphs applied just to the terminal
 
 link to a zillion themes that you can simply copy and paste into your oh-my-config.json
-https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/themes
+https://ohmyposh.dev/docs/themes#default
 
 
