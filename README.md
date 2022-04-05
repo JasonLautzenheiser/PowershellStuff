@@ -38,5 +38,14 @@ Add the following line in your startup profile (changing the appropriate paths o
 ```console
 . C:\apps\powershell\ps-profile.ps1
 ```
+## Vs Code Settings
+If you use the integrated terminal in In Visual Studio Code you will have to update your font settings to get the glyphs to render
+- File => Preferences => Settings => 
+- search for font under text editor
+In the Editor: Font Famil setting, add your installed NF name to the front of the list and VS code will fallback to the existing ones if need be
+ex - MesloLGM Nerd Font, Consolas, 'Courier New', monospace
+
+link to a zillion themes that you can simply copy and paste into your oh-my-config.json
+https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/themes
 
 
