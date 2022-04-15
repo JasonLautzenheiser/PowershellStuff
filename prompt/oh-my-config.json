@@ -48,6 +48,18 @@
           "type": "dotnet"
         },
         {
+          "type": "spotify",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#1BD760",
+          "properties": {
+            "playing_icon": "\uE602 ",
+            "paused_icon": "\uF8E3 ",
+            "stopped_icon": "\uF04D "
+          }
+        },
+        {
           "type": "angular",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
