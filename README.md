@@ -48,3 +48,22 @@ link to a zillion themes that you can simply copy and paste into your oh-my-conf
 https://ohmyposh.dev/docs/themes#default
 
 
+## Included Scripts
+
+### Remove-Old-Modules
+When you update modules, like oh-my-posh, multiple versions can stick around.  If you want to clean them up, this script will help you out by removing old versions but leaving the most recent one installed.
+
+```console
+remove-old-modules <module-name>
+```
+pass in a module name to clean up old installs of the module passed in.
+
+```console
+remove-old-modules oh-my-posh
+```
+this will clean up older installed versions of oh-my-posh
+
+```console
+remove-old-modules -includeAll
+```
+This flag will remove all installed modules returned by a call to ```Get-InstalledModule ```
