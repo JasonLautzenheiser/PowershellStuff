@@ -18,7 +18,7 @@
         },
         {
           "type": "git",
-          "style": "powerline",
+          "style": "accordion",
           "foreground": "#193549",
           "background": "#ffeb3b",
           "background_templates": [
@@ -44,12 +44,12 @@
             "fetch_version": true,
             "template": " \ue70c {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} "
           },
-          "style": "powerline",
+          "style": "accordion",
           "type": "dotnet"
         },
         {
           "type": "spotify",
-          "style": "powerline",
+          "style": "accordion",
           "powerline_symbol": "\uE0B0",
           "foreground": "#ffffff",
           "background": "#1BD760",
