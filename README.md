@@ -15,6 +15,16 @@ I use [oh-my-posh](https://ohmyposh.dev) for my custom prompt.  Check out this g
 
 To make it look properly, you will need to download and install a Nerd Font that contains the icons used in oh-my-posh.  Follow the instructions here:  [oh-my-posh Nerd Fonts](https://ohmyposh.dev/docs/config-fonts)
 
+oh-my-posh is updated very frequently with new features and bug fixes.  I recommend keeping it updated.   
+
+Powershell to install an update
+```powershell
+Update-Module oh-my-posh
+```
+the restart powershell or reload your profile.  
+
+If you using oh-my-posh with bash or some other shell your update procedure will be different.
+
 ## Setup
 Edit your profile script, which by using the following in your powershell terminal:
 
